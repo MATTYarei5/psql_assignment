@@ -55,6 +55,6 @@ CREATE TABLE ProductsCategoriesXref (
 
 CREATE TABLE Warranties (
   warranty_id SERIAL PRIMARY KEY,
-  product_id INTEGER REFERENCES Products(product_id),
+  product_id INTEGER REFERENCES Products(product_id) ON DELETE CASCADE,
   warranty_months VARCHAR NOT NULL
 );
